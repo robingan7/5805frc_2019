@@ -187,9 +187,7 @@ public class Robot extends TimedRobot {
     // teleop starts running. If you want the autonomous to
     // continue until interrupted by another command, remove
     // this line or comment it out.
-    Robot.drivebase.arcadeDrive(Robot.joy.getRawAxis(RobotMap.forward_backward), Robot.joy.getRawAxis(RobotMap.turn));
-    Robot.manipulator.tiltWristPercent(Robot.joy2.getRawAxis(RobotMap.mannualtilt));
-    Robot.lift.moveToPercent(Robot.joy2.getRawAxis(RobotMap.mannuallift));
+    
   }
 
   /**
@@ -198,6 +196,9 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     Scheduler.getInstance().run();
+    Robot.drivebase.arcadeDrive(Robot.joy.getRawAxis(RobotMap.forward_backward), Robot.joy.getRawAxis(RobotMap.turn));
+    Robot.manipulator.tiltWristPercent(Robot.joy2.getRawAxis(RobotMap.mannualtilt));
+    Robot.lift.moveToPercent(Robot.joy2.getRawAxis(RobotMap.mannuallift));
   }
 
   /**

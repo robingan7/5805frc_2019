@@ -8,10 +8,10 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
-import frc.robot.commands.Constants;
 import edu.wpi.first.wpilibj.Solenoid;
 import java.util.concurrent.TimeUnit;		// Delay
 import com.ctre.phoenix.motorcontrol.can.*;
+import frc.robot.Until.Constants;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.StatusFrameEnhanced;
